@@ -1,5 +1,3 @@
-import json
-
 # CRUD operations for a list
 def list_crud():
     my_list = []
@@ -9,9 +7,7 @@ def list_crud():
         print("2. Read")
         print("3. Update")
         print("4. Delete")
-        print("5. Save to file")
-        print("6. Load from file")
-        print("7. Exit")
+        print("5. Exit")
         choice = input("Enter choice: ")
         
         if choice == '1':
@@ -33,14 +29,6 @@ def list_crud():
             else:
                 print("Invalid index")
         elif choice == '5':
-            with open('list_data.json', 'w') as file:
-                json.dump(my_list, file)
-            print("List saved to list_data.json")
-        elif choice == '6':
-            with open('list_data.json', 'r') as file:
-                my_list = json.load(file)
-            print("List loaded from list_data.json")
-        elif choice == '7':
             break
         else:
             print("Invalid choice")
@@ -54,9 +42,7 @@ def set_crud():
         print("2. Read")
         print("3. Update")
         print("4. Delete")
-        print("5. Save to file")
-        print("6. Load from file")
-        print("7. Exit")
+        print("5. Exit")
         choice = input("Enter choice: ")
         
         if choice == '1':
@@ -76,14 +62,6 @@ def set_crud():
             item = input("Enter item to delete: ")
             my_set.discard(item)
         elif choice == '5':
-            with open('set_data.json', 'w') as file:
-                json.dump(list(my_set), file)
-            print("Set saved to set_data.json")
-        elif choice == '6':
-            with open('set_data.json', 'r') as file:
-                my_set = set(json.load(file))
-            print("Set loaded from set_data.json")
-        elif choice == '7':
             break
         else:
             print("Invalid choice")
@@ -97,9 +75,7 @@ def tuple_crud():
         print("2. Read")
         print("3. Update")
         print("4. Delete")
-        print("5. Save to file")
-        print("6. Load from file")
-        print("7. Exit")
+        print("5. Exit")
         choice = input("Enter choice: ")
         
         if choice == '1':
@@ -121,14 +97,6 @@ def tuple_crud():
             else:
                 print("Invalid index")
         elif choice == '5':
-            with open('tuple_data.json', 'w') as file:
-                json.dump(my_tuple, file)
-            print("Tuple saved to tuple_data.json")
-        elif choice == '6':
-            with open('tuple_data.json', 'r') as file:
-                my_tuple = tuple(json.load(file))
-            print("Tuple loaded from tuple_data.json")
-        elif choice == '7':
             break
         else:
             print("Invalid choice")
@@ -142,9 +110,7 @@ def dict_crud():
         print("2. Read")
         print("3. Update")
         print("4. Delete")
-        print("5. Save to file")
-        print("6. Load from file")
-        print("7. Exit")
+        print("5. Exit")
         choice = input("Enter choice: ")
         
         if choice == '1':
@@ -167,14 +133,6 @@ def dict_crud():
             else:
                 print("Key not found")
         elif choice == '5':
-            with open('dict_data.json', 'w') as file:
-                json.dump(my_dict, file)
-            print("Dictionary saved to dict_data.json")
-        elif choice == '6':
-            with open('dict_data.json', 'r') as file:
-                my_dict = json.load(file)
-            print("Dictionary loaded from dict_data.json")
-        elif choice == '7':
             break
         else:
             print("Invalid choice")
